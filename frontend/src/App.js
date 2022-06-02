@@ -21,24 +21,25 @@ function App() {
     <Router>
       {/* Navbar */}
       <Navbar click={() => setSideToggle(true)}/>
+
       {/* SlideDrawer*/ }
       <SideDrawer show={sideToggle} click={() => setSideToggle(false)}/>
+
       {/* BackDrawer*/ }
       <BackDrop show={sideToggle} click={() => setSideToggle(false)}/>
 
       <main>
         <Routes>
+          {/* HomeScreen */}
           <Route exact path = "/" element ={ <HomeScreen/> }/>
+
+          {/* ProductScreen */}
           <Route exact path = "/product/:id" element ={ <ProductScreen />} />
-          {/* <Route exact path = "/cart" component ={ CartScreen } /> */}
-        
+
+          {/* CartScreen */}
           <Route exact path = "/cart" element ={ <CartScreen />} />
         </Routes>
       </main>
-
-      {/* HomeScreen */}
-      {/* ProductScreen */}
-      {/* CartScreen */}
     </Router>
   );
 }

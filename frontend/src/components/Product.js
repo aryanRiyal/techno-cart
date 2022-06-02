@@ -14,7 +14,7 @@ const Product = () => {
 
             <p className="info__price">$499.99</p>
 
-            <Link to={'/product/${1111}'} className="info__button">
+            <Link to={`/product/${1111}`} className="info__button">
                 View
             </Link>
         </div>
@@ -23,4 +23,4 @@ const Product = () => {
     );
 };
 
-export default Product
+export default Product;
