@@ -9,18 +9,18 @@ import { getProductDetailsReducer, getProductsReducer } from './reducers/product
 const reducer = combineReducers({
   cart:cartReducer,
   getProducts: getProductsReducer,
-  getProductsDetails: getProductDetailsReducer
+  getProductDetails: getProductDetailsReducer
 });
 
 const middleware = [thunk];
 //from here 
-const cartFromLocalStorage = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
+const cartItemsInLocalStorage = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
 
 const INITIAL_STATE = {
   cart:{
-    cartItems: cartFromLocalStorage
-  }
-}
+    cartItems: cartItemsInLocalStorage,
+  },
+};
 //till here and INITIAL_STATE
 const store = legacy_createStore(
   reducer,
