@@ -41,7 +41,8 @@
 }
 
 .sidedrawer__links > li > a:hover{
-    background: #171717;
+    /* background: #171717; */
+    background-color: #231942;
     color:#f4f4f4;
 }
 

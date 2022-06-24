@@ -2,6 +2,8 @@ import "./ProductScreen.css";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {useParams} from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Actions
 import { getProductDetails } from "../redux/actions/productActions";
@@ -19,12 +21,22 @@ const ProductScreen = ({ match, history }) => {
     if (product && id !== product._id) {
       dispatch(getProductDetails(id));
     }
-  }, [dispatch, match, product]);
+  }, [dispatch, match, product, id]);
 
   const addToCartHandler = () => {
     dispatch(addToCart(product._id, qty));
     history.push(`/cart`);
   };
+
+  const notify = () => toast.success("Product added Successfully!",{
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
 
   return (
     <div className="productscreen">
@@ -67,9 +79,23 @@ const ProductScreen = ({ match, history }) => {
                 </select>
               </p>
               <p>
-                <button type="button" onClick={addToCartHandler}>
+                <button type="button" onClick={() => {
+                  notify();
+          addToCartHandler();
+        }}>
                   Add To Cart
                 </button>
+                <ToastContainer 
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                />
               </p>
             </div>
           </div>

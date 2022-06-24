@@ -16,7 +16,10 @@ const Navbar = ({click}) => {
     <nav className="navbar">
       {/* logo */}
       <div className="navbar__logo">
-        <h2>Techno Cart</h2>
+      <Link to="/">
+      <span>Techno Cart</span>
+      <i class="fa-solid fa-plug"></i>
+      </Link>
       </div>
       
       {/* links */}
