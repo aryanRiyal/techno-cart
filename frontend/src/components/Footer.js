@@ -69,7 +69,7 @@ function Footer() {
             </Link>
           </div>
           <small class='website-rights'>Techno Cart © 2022</small>
-          <div class='social-icons'>
+          {/* <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
               to='https://www.facebook.com/'
@@ -110,7 +110,7 @@ function Footer() {
             >
               <i class='fab fa-linkedin' />
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

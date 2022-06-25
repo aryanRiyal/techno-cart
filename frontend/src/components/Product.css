@@ -2,8 +2,9 @@
     width:300px;
     padding: 1rem;
     background:#ffff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-    margin: 8px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    margin: 18px auto;
+    border-radius: 18px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,10 +13,11 @@
 .product > img{
     height:170px;
     border-radius: 8px;
+    margin-bottom: 14px;
 }
 
 .product__info > p{
-    margin-bottom: 8px;
+    margin-bottom: 14px;
 }
 
 .info__price{
@@ -23,12 +25,14 @@
 }
 
 .info__name{
-    font-size:1rem;
+    font-weight: bold;
+    text-align: center;
+    font-size:1.2rem;
     overflow:hidden;
 }
 
 .info__description{
-    font-size:0.8rem;
+    font-size:1rem;
 }
 
 .info__button{
@@ -40,7 +44,8 @@
     background:#f4f4f4;
     padding:8px 16px;
     border:1px solid #171717;
-    font-size: 1rem;
+    border-radius: 18px;
+    font-size: 1.2rem;
 }
 
 .info__button:hover{
